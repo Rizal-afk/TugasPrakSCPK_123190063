@@ -1,0 +1,70 @@
+[System]
+Name='Tugas2_123190063_Muhammad Khairul Rizal'
+Type='mamdani'
+Version=2.0
+NumInputs=3
+NumOutputs=3
+NumRules=12
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='karyawan'
+Range=[1 5]
+NumMFs=2
+MF1='sedikit':'trimf',[-0.2525 1 3.788]
+MF2='banyak':'trimf',[2.172 5 6.616]
+
+[Input2]
+Name='stok'
+Range=[5 50]
+NumMFs=3
+MF1='sedikit':'gaussmf',[9.363 5.225]
+MF2='sedang':'gaussmf',[7.644 27.5]
+MF3='melimpah':'gaussmf',[7.835 49.77]
+
+[Input3]
+Name='pesanan'
+Range=[1 100]
+NumMFs=2
+MF1='menurun':'trimf',[-30 1 70]
+MF2='meningkat':'trimf',[30 100 140]
+
+[Output1]
+Name='produksi'
+Range=[1 100]
+NumMFs=2
+MF1='dikurangi':'trimf',[-38.6 1 70.3]
+MF2='ditambah':'trimf',[30.7 100 139.6]
+
+[Output2]
+Name='bonus'
+Range=[1 20]
+NumMFs=3
+MF1='sedikit':'trimf',[1 3.85 6.7]
+MF2='sedang':'trimf',[6.7 9.55 12.4]
+MF3='banyak':'trimf',[12.4 16.2 20]
+
+[Output3]
+Name='waktupengemasan'
+Range=[1 60]
+NumMFs=2
+MF1='sebentar':'trimf',[-22.6 1 42.3]
+MF2='lama':'trimf',[18.7 60 83.6]
+
+[Rules]
+2 0 0, 0 0 1 (1) : 1
+1 0 0, 0 0 2 (1) : 1
+0 1 2, 2 0 0 (1) : 1
+0 2 2, 2 0 0 (1) : 1
+0 3 2, 2 0 0 (1) : 1
+0 1 1, 1 0 0 (1) : 1
+0 2 1, 1 0 0 (1) : 1
+0 3 1, 1 0 0 (1) : 1
+1 0 2, 0 3 0 (1) : 1
+2 0 2, 0 2 0 (1) : 1
+1 0 1, 0 1 0 (1) : 1
+2 0 1, 0 1 0 (1) : 1
