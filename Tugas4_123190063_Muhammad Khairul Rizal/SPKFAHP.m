@@ -1,8 +1,8 @@
 namaKaryawan = {'Agus' 'Septian' 'Andi' 'Toni'};
-data = [ 8 30 28
-         12 45 40
-         8 28 28
-         10 34 33];
+data = [ 8 30 28 28
+         12 45 40 40
+         8 28 28 28
+         10 34 33 33];
 
 maksJamKerja = 12;
 maksJumlahPemesan = 60;
